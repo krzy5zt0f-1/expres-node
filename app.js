@@ -5,11 +5,14 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const mongoose = require('mongoose');
+
+const cors = require('cors');
 //making sure to not hard code DB_CONNECTION
 require('dotenv/config');
 
 //Middlewares
 app.use(bodyParser.json());
+app.use(cors());
 //app.use('/posts', () => {
   //console.log('This is a middleware running');
 //})
